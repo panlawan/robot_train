@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Robot Controller</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .video-stream {
+            margin-bottom: 20px;
+            border: 4px solid #444;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        }
+
+        .controls {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(3, 60px);
+            gap: 10px;
+        }
+
+        .controls button {
+            font-size: 16px;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .controls button:hover {
+            background-color: #45a049;
+        }
+
+        .empty {
+            background-color: transparent;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>🤖 Robot Live Stream + Control</h2>
+        <img class="video-stream" src="{{ url_for('video') }}" width="320" height="240">
+
+        <form class="controls" action="/move" method="post">
+            <div class="empty"></div>
+            <button name="direction" value="forward">⬆️</button>
+            <div class="empty"></div>
+
+            <button name="direction" value="left">⬅️</button>
+            <button name="direction" value="stop">⏹️</button>
+            <button name="direction" value="right">➡️</button>
+
+            <div class="empty"></div>
+            <button name="direction" value="backward">⬇️</button>
+            <div class="empty"></div>
+        </form>
+    </div>
+</body>
+</html>
