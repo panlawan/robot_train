@@ -9,9 +9,9 @@
 ```
 8. create path of project
 
-   line_robot/
+   line_robot/\n
    ├── main.py                  
-   ├── templates/
+   ├── templates/\n
    │   └── index.html           
    ├── venv/                    
    └── requirements.txt         
