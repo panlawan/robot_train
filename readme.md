@@ -8,6 +8,7 @@
 7.   $ source venv/bin/activate
 ```
 8. create path of project
+
    line_robot/
    ├── main.py                  
    ├── templates/
