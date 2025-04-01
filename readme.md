@@ -9,12 +9,15 @@
 ```
 8. create path of project
 
-   line_robot/\n
+line_robot/
    ├── main.py                  
-   ├── templates/\n
+   ├── templates/
    │   └── index.html           
    ├── venv/                    
    └── requirements.txt         
+
+<pre lang="markdown"> ``` line_robot/ ├── main.py ├── templates/ │ └── index.html ├── venv/ └── requirements.txt ``` </pre>
+
 ```
 9.   $ pip install -r requirements.txt
 10.  $ nano run.sh
